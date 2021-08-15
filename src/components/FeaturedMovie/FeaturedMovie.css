@@ -1,0 +1,140 @@
+.featured {
+    /*Colocando a imagem do filme em destaque, grande no topo da página */
+    height: 100vh;
+}
+
+.featured--vertical {
+    /*Colocando efeito degrade na vertical da imagem */
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.featured--horizontal {
+    /*Colocando efeito degrade na horizontal da imagem */
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #111 25%, transparent 75%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-bottom: 150px;
+    padding-top: 70px;
+}
+
+.featured--name {
+    /*Configuração da fonte e peso do nome do filme/serie */
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.featured--info {
+    /*Configuração da fonte, peso e margem das informações em geral que apareceram em cima da imagem na parte preta */
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.featured--points {
+    /*Configuração da pontuação do filme/serie */
+    display: inline-block;
+    color: #46d369;
+    margin-right: 15px;
+}
+
+.featured--year {
+    /*Configuração da exibição do ano de lançamento do filme/serie */
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.featured--seasons {
+    /*Configuração da exibição da quantidade de temporadas do filme/serie */
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.featured--description {
+    /*Configuração da descricao do filme/serie */
+    margin-top: 15px;
+    font-size: 20px;
+    color: #999;
+    max-width: 40%;
+}
+
+.featured--buttons {
+    /* Separando os botões da descrição */
+    margin-top: 15px;
+}
+
+.featured--watch{
+    /*Configuração do botão assistir */
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: #fff;
+    color: #000;
+    opacity: 1;
+    
+}
+
+.featured--wishlist{
+    /*Configuração do botão minha lista */
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: #333;
+    color: #fff;
+    opacity: 1;
+}
+
+.featured--watch:hover, .featured--wishlist:hover{
+    /* Hoverzinho básico nos botôes quando o cursor estiver em cima deles */
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.featured--genres{
+    /*Configuração da lista de generos do filme/serie */
+    margin-top: 15px;
+    font-size: 18px;
+    color: #999
+}
+
+@media (max-width: 760px){
+    /*Portabilidade para mobile */
+    .featured{
+        height: 80vh;
+    }
+    
+    .featured--name{
+        font-size: 40px;
+    }
+
+    .featured--info{
+        font-size: 16px;
+    }
+
+    .featured--description{
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+
+    .featured--watch, .featured--wishlist{
+        font-size: 16px;
+    }
+
+    .featured--genres{
+        font-size: 14px;
+    }
+}

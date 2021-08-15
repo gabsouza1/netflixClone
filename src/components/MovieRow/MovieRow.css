@@ -1,0 +1,85 @@
+.movieRow{
+    /* Deixando o titulo de cada categoria com margem a esquerda de 30px */
+    margin-bottom: 30px;
+}
+
+.movieRow h2 {
+    /* Retirando as margens de cima, direita, baixo. Deixando apenas 30px na esquerda */
+    margin: 0px 0px 0px 30px;
+}
+
+.movieRow--listarea {
+    /* Cortar tudo que passar da tela na horizontal - efeito nas listas */
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.movieRow--list {
+    /* Movimentação da lista mais suave*/
+    transition: all ease 0.5s;
+}
+
+.movieRow--item{
+    /* Todas os itens na mesma linha e bloqueados */
+    display: inline-block;
+    /* Tamanho de cada item 200px */
+    width: 150px;
+    cursor: pointer;
+}
+
+.movieRow--item img{
+    /* A imagem terá 100% de tamanho dentro do item */
+    width: 100%;
+    /* Porém a margem dela será de 150% mas a imagem ocupará somente 90% do quadro imaginario*/
+    transform: scale(0.9);
+    /* Efeito para suavisar a mudança de escala 0.9 para 1 */
+    transition: all ease 0.2s;
+}
+
+.movieRow--item img:hover{
+    /* Aqui voltamos a imagem para ocupar 100% do quadro imaginario mas somente quando o ponteiro do mouse estiver em cima da imagem,
+    dá um belo efeito para o usuário
+    */
+    transform: scale(1);
+}
+
+.movieRow--left, .movieRow--right {
+    /* Configuração dos botôes direita e esquerda da página */
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right {
+    /* opacidade para quando o mouse estiver em cima da fileira, o botão ficar visivel*/
+    opacity: 1;
+}
+
+.movieRow--left{
+    /* movendo o botão esquerdo totalmente para esquerda*/
+    left: 0;
+}
+
+.movieRow--right{
+    /* movendo o botão direitor totalmente para direita*/
+    right: 0;
+}
+
+@media(max-width: 800px){
+    /* portabilidade dos botões para mobile/ tablet 
+    fazendo com que os botôes sempre estejam visiveis na tela */
+    .movieRow--left,
+    .movieRow--right{
+        opacity: 1;
+    }
+}

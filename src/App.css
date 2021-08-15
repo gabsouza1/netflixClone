@@ -1,0 +1,40 @@
+/* Importando a Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    /*Colocando um border box na pagina inteira */
+    box-sizing: border-box;
+}
+
+body {
+    /*Configuração inicial do corpo da página */
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.lists{
+    /* Efeito para aparecer a listas e mostrar para o usuário que existe conteudo para baixo*/
+    margin-top: -150px;
+}
+
+footer {
+    /*Configuração das mensagens de rodapé */
+    margin-top: 50px 0;
+    text-align: center;
+}
+
+.loading{
+    /*Configuração do gif loading da netflix */
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
